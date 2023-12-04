@@ -2,39 +2,66 @@
 
 <html lang="en"> 
 <head>
+  <!-- configurando o conjunto de caracteres e o título da página -->
   <meta charset="UTF-8">
   <title>Animalândia</title>
+  <!-- importando algumas fontes do Google e estilos para um carrossel -->
   <link href="https://fonts.googleapis.com/css?family=Joti+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lohit+Tamil&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lohit+Devanagari&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  rel="stylesheet"/>
   <link rel="stylesheet" href="style2.css">
-  <style>
-    body {
-    background: #E5E5E5}
-  </style>
+  
 </head>
 
 <body>
+
+ <!-- parte do topo da página com o logo e barra de navegação -->
     <div class="topo">
         <div class="verde_tarja "></div>
         <span class="logo">Animalândia</span>
         <div class="cinza_tarja"></div>
-        <div class="frases">
-          <span class="animal">Animal </span>
-          <span class="acessorios">Acessórios</span>
-          <span class="promoções">Promoções</span>
-          <span class="serviços">Serviços</span>
+
+
+         <!-- barra de navegação com links para categorias e subcategorias -->
+        <nav class="menu-nav">
+          <ul>
+            <li><a href="*">Animal</a>
+              <ul>
+                <li><a href="*">Cachorros</a></li>
+                <li><a href="*">Gatos</a></li>
+                <li><a href="*">Aves</a></li>
+                <li><a href="*">Peixes</a></li>
+              </ul>
+            </li>
+            <li><a href="*">Acessórios</a>
+              <ul>
+                <li><a href="*">Coleiras</a></li>
+                <li><a href="*">Roupas</a></li>
+                <li><a href="*">Laços</a></li>
+                <li><a href="*">Guias</a></li>
+              </ul>
+            </li>
+            <li><a href="*">Promoções</a></li>
+            <li><a href="*">Serviços</a>
+              <ul>
+                <li><a href="*">Banho</a></li>
+                <li><a href="*">Tosa</a></li>
+                <li><a href="*">Veterinário 24hrs</a></li>
+              </ul>
+            </li>
+
+
+
+          </ul>
+        </nav>
+
+        <!-- campo de busca -->
+        <div class="caixa-buscar">
+          <input type="text" id="campoBusca" name="campoBusca" placeholder="Oque seu pet precisa?">
         </div>
 
-     <div class="caixa-texto">
-        <div class="caixa-buscar"></div>
-        <span class="frase-buscar">O que seu pet precisa?</span>
-        <div class="e5_7">
-            <div class="e5_6"></div>
-        </div>
-        </div>
-
+    <!-- conteúdo da página com produtos e informações -->
     <div class="content_produtos-1">
         <div class="content_produtos-2">
           <div class="principal1"></div>
@@ -64,6 +91,8 @@
     <span class="preco5">R$ 16,50</span>
 
   </div>
+
+  <!-- carrossel de banners -->
   <div class="slides">
 
       <div class="slide-content">
@@ -100,8 +129,104 @@
 
   </div>
 
+  <!-- ícones e modais para favoritos e carrinho de compras -->
+    <button id="open-heart">
+      <img src="images/icon _heart outline_.svg" alt="icon 1">
+    </button>
 
-        
+
+  <div id="modalheart" class="modalHeart">
+    <div class="heart-content">
+
+      <div class="heart-header">
+        <img src="images/icon _heart outline_.svg" alt="icon 1" style="width: 30px;">
+      </div>
+
+      <div class="heart-title">
+        <h2>Seus favoritos</h2>
+        <span id="close-wish" class="close-wish">&times;</span>
+      </div>
+
+      <div class="heart-items">
+        <div>
+          <p>Ração seca Hills ....................................................................................  R$ 122,90</p>
+          <br>
+          <p>Petisco de carne - Petiscão......................................................................... R$ 9,99</p>
+        </div>
+      </div>
+
+      <div class="heart-actions">
+        <div>
+          <p>TOTAL:</p>
+          <p>R$<span id="total-price">132,89</span></p>
+        </div>
+      </div>
+  </div>
+
+<!-- modal do carrinho de compras -->
+  <button id="open-card">
+    <img src="images/icon _Shopping bag_.svg" alt="icon 2">
+  </button>
+
+  <div id="modalcard" class="modalCard">
+    <div class="card-content">
+
+      <div class="card-header">
+        <img src="images/icon _Shopping bag_.svg" alt="icon 2" style="width: 30px;">
+      </div>
+
+      <div class="card-title">
+        <h2>Seu Carrinho</h2>
+        <span id="close-card" class="close-card">&times;</span>
+      </div>
+
+      <div class="card-items">
+        <div>
+          <p>Ração seca Hills ....................................................................................  R$ 122,90</p>
+          <br>
+          <p>Petisco de carne - Petiscão......................................................................... R$ 9,99</p>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <div>
+          <p>TOTAL:</p>
+          <p>R$<span id="total-price-card">132,89</span></p>
+        </div>
+      </div>
+    </div>
+</div>
+  
+
+<!-- formulário de login --> 
+  <div class="cadastro">
+     <form action="">
+      <h1>Login</h1>
+
+    <div class="input-box">
+      <input type="text" placeholder="Email" required>
+    </div>
+
+    <div class="input-box3">
+      <input type="password" placeholder="Senha" required>
+    </div>
+
+    <div class="lembrar-infos">
+      <label><input type="checkbox">Lembrar de mim da próxima vez</label>
+      <a href="#">Esqueci a senha</a>
+    </div>
+
+    <button type="enviar" class="btn">Login</button>
+
+    <div class="registre">
+      <p>Não tem uma conta ainda? <a href="#">Registre-se aqui</a></p>
+    </div>
+  </form>
+
+  </div>
+
+ <!--script JavaScript -->
+  <script src="main.js"></script>
 </body>
 
 </html>

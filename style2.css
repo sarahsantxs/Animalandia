@@ -1,6 +1,8 @@
-
+body {
+    background: #E5E5E5} /* Define a cor de fundo para toda página */
 
 .verde_tarja {
+	    /* style para uma faixa verde no topo */
         background-color: rgba(151, 199, 89, 0.610);
         width: 1515px;
         height: 107px;
@@ -8,9 +10,11 @@
         left: -3px;
         top: 0px;
         border: 1px solid rgba(33, 31, 31, 1);
+		z-index: -99;
       }
 
 .logo {
+	/* style para o logotipo "Animalândia" */
         color: rgba(0, 0, 0, 1);
         width: 318px;
         height: 48px;
@@ -24,87 +28,69 @@
 		cursor: pointer;
       }
 .cinza_tarja {
+	/* style para uma borda cinza */
         border: 3px solid rgb(189, 182, 182);
       }
 
 .cinza_tarja {
-        width: 1512.0003662109375px;
+        width: 1512px;
         height: 0px;
         position: absolute;
         left: 0px;
         top: 165px;
       }
 
-.frases {
-        width: 564px;
-        height: 30px;
-        position: absolute;
-        left: 474px;
-        top: 121px; 
+
+/* styles para a barra de navegação */
+.menu-nav {
+
+	list-style: none;
+	padding: 100px;
+	text-align: center;
 }
 
-.animal {
-	color: rgba(93, 86, 86, 1);
-	width: 82px;
-	height: 30px;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	font-family: 'Lohit Tamil', sans-serif;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
-	cursor: pointer;
-  }
-
-
-.acessorios {
-	color: rgba(93, 86, 86, 1);
-	width: 126px;
-	height: 30px;
-	position: absolute;
-	left: 129px;
-	top: 0px;
-	font-family: 'Lohit Tamil', sans-serif;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
-	cursor: pointer;
-  }
-  
-.promoções {
-	color: rgba(93, 86, 86, 1);
-	width: 132px;
-	height: 30px;
-	position: absolute;
-	left: 295px;
-	top: 0px;
-	font-family: 'Lohit Tamil', sans-serif;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
-	cursor: pointer;
-  }
-  
-.serviços {
-	color: rgba(93, 86, 86, 1);
-	width: 97px;
-	height: 30px;
-	position: absolute;
-	left: 467px;
-	top: 0px;
-	font-family: 'Lohit Tamil', sans-serif;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
-	cursor: pointer;
-  }
-
-.frases :hover {
-	color:rgba(127, 201, 38, 0.61); ;
+.menu-nav ul {
+	background-color: #E5E5E5;
+	display:inline-block;
 }
-  
 
+.menu-nav ul li {
+	display: inline;
+	position: relative;
+}
+
+.menu-nav ul li a {
+	color: #666363;
+	text-decoration: none;
+	padding: 10px;
+	display:inline-block;
+	transition: background .4s;
+}
+
+.menu-nav ul li a:hover {
+	background-color: rgba(151, 199, 89, 0.610);
+}
+
+.menu-nav ul ul {
+	display: none;
+	left: 0;
+	position: absolute;
+}
+
+.menu-nav ul li:hover ul {
+	display: block;
+}
+
+.menu-nav ul ul{
+	width: 150px;
+}
+
+.menu-nav ul ul li a {
+	display:block;
+}
+
+
+/* styles para o conteúdo dos produtos */
 .content_produtos-1 {
 	width: 1438px;
 	height: 320px;
@@ -206,6 +192,7 @@
   }
 
 
+/* style para imagens e preços dos produtos */
 .principal1-imagem {
 	width: 180px;
 	height: 226px;
@@ -215,6 +202,8 @@
 	background-image: url(images/image_1.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	cursor: pointer;
+
   }
 
 .principal2-imagem {
@@ -226,6 +215,8 @@
 	background-image: url(images/image_6.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	cursor: pointer;
+
   }
 
 .principal3-imagem {
@@ -237,6 +228,8 @@
 	background-image: url(images/image_4.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	cursor: pointer;
+
 }
 
 .principal4-imagem {
@@ -248,6 +241,7 @@
 	background-image: url(images/image_3.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	cursor: pointer;
 }
 
 .principal5-imagem {
@@ -259,6 +253,8 @@
 	background-image: url(images/image_5.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	cursor: pointer;
+
   }
 
 
@@ -392,57 +388,22 @@
 	letter-spacing:0;
 }
 
-.caixa-texto { 
-	width:685px;
-	height:46px;
-	position:absolute;
-    left:410px;
-}
-.caixa-buscar { 
-	background-color:rgba(255, 255, 255, 1);
-	width:685px;
-	height:46px;
-	position:absolute;
-	left:0px;
-	top:0px;
-	border-top-left-radius:60px;
-	border-top-right-radius:60px;
-	border-bottom-left-radius:60px;
-	border-bottom-right-radius:60px;
-	border:2px solid rgba(0, 0, 0, 1);
+/* styles para a caixa de busca */
+.caixa-buscar input {
+	font-size: 25px;
+    padding: 10px;
+    width: 500px; 
+    margin-top: -250px; 
+    margin-left: 500px; 
+	border-radius: 60px;
+    height: 30px;
 	cursor: pointer;
-
+	position: absolute; 
+	border: 3px solid rgba(0, 0, 0, 1);
+	font-family: "Lohit Tamil", sans-serif;
 }
 
-.frase-buscar { 
-	color:rgba(152.56170719861984, 132.0930415391922, 132.0930415391922, 1);
-	width:285px;
-	height:32px;
-	position:absolute;
-	left:230px;
-	top:11px;
-	font-family:Lohit Tamil;
-	text-align:left;
-	font-size:25px;
-	letter-spacing:0;
-	cursor: pointer;
-}
-.e5_7 { 
-	width:34px;
-	height:35px;
-	position:absolute;
-	left:500px;
-	top:5px;
-}
-.e5_6 { 
-	background-color:rgba(35, 30, 30, 1);
-	width:34px;
-	height:35px;
-	position:absolute;
-	left:500px;
-	top:0px;
-}
-
+/* styles para o carrossel de banners */
 .slides {
 	width: 1319px;
 	height: 332px;
@@ -469,6 +430,7 @@
 .banner {
 	width: 150%;
 	position: relative;
+	z-index: -9;
 }
 
 .banner img {
@@ -476,6 +438,8 @@
 
 }
 
+
+/*styles para navegação manual do carrossel*/
 .manual-navegação {
 	position: absolute;
 	width: 1000px;
@@ -510,4 +474,187 @@
 
 #radio3:checked ~ .first {
 	margin-left: -200%;
+}
+
+#radio3:checked ~ .first {
+	margin-left: -200%;
+}
+
+.input-box , .input-box3 {
+	border-radius: 30px;
+}
+
+
+/* styles para o ícone de favoritos e modal correspondente */
+ #open-heart {
+	border: none;
+	background-color: rgba(151, 199, 89, 0) ;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-top: -270px;
+	margin-left: 1200px;
+ }
+
+
+  .modalHeart {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 550px;
+	background-color: rgba(173, 202, 135, 0.925);
+	box-shadow: -10px 0 15px #000000d0;
+	transform: translateX(110%);
+	z-index: 3;
+}
+
+  .modalHeart.open {
+	transform: translateX(0);
+  }
+
+ .heart-content { 
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+ }
+
+ .heart-header {
+	padding: 1rem;
+	border-bottom: 1px solid #000000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+ }
+ .heart-title {
+	position: relative;
+ }
+
+.heart-title span {
+	position: absolute;
+	top: -50px;
+	right: 8px;
+	width: 25px;
+	height: 25px;
+	background-color: rgba(255, 255, 255, 0.816);
+	border-radius: 50% ;
+	color: #000000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	cursor: pointer;
+	transition: transform 0.2 ease;
+}
+
+.heart-title span:hover {
+	transform: scale(1.1);
+}
+
+.heart-items {
+	flex: 1;
+	overflow-x: hidden;
+}
+
+.heart-actions {
+	padding:1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	border-top: 1px solid #0000;
+	box-shadow: 0 -5px 10px #0000007e;
+	margin-bottom: 1rem;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* styles para o ícone de carrinho de compras e modal correspondente */
+
+ #open-card {
+	border: none;
+	background-color: rgba(151, 199, 89, 0) ;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-top: -270px;
+	margin-left: 1350px;
+ }
+
+
+  .modalCard {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 550px;
+	background-color: rgba(173, 202, 135, 0.925);
+	box-shadow: -10px 0 15px #000000d0;
+	transform: translateX(110%);
+}
+
+  .modalCard.open {
+	transform: translateX(0);
+  }
+
+ .card-content { 
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+ }
+
+ .card-header {
+	padding: 1rem;
+	border-bottom: 1px solid #000000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+ }
+ .card-title {
+	position: relative;
+ }
+
+.card-title span {
+	position: absolute;
+	top: 150px;
+	right: 8px;
+	width: 25px;
+	height: 25px;
+	background-color: rgba(255, 255, 255, 0.816);
+	border-radius: 50% ;
+	color: #000000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	cursor: pointer;
+	transition: transform 0.2 ease;
+}
+
+.card-title span:hover {
+	transform: scale(1.1);
+}
+
+.card-items {
+	flex: 1;
+	overflow-x: hidden;
+}
+
+.card-actions {
+	padding:1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	border-top: 1px solid #0000;
+	box-shadow: 0 -5px 10px #0000007e;
+	margin-bottom: 1rem;
+	font-size: 20px;
+	font-weight: bold;
 }

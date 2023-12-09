@@ -57,6 +57,7 @@ body {
 .menu-nav ul li {
 	display: inline;
 	position: relative;
+	z-index: 999;
 }
 
 .menu-nav ul li a {
@@ -658,3 +659,61 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 }
+
+#animais {
+	margin-top: 900px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#cachorros {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+
+#gatos {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+#aves {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+#peixes {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+#acessorios {
+	margin-top: 150px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+#services {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+#promo {
+	width: auto;
+	height: auto;
+	margin-top: 150px;
+}
+
+#veterinario {
+	width: auto;
+	height: auto;
+	margin-top: 50px;
+}
+
